@@ -84,13 +84,13 @@ public class ArcUtils {
      */
     private static void drawArrow(float x, float y, float degrees, Paint paint, Canvas canvas) {
         canvas.save();
-        canvas.rotate(degrees+4, x-100, y);
+        canvas.rotate((float) (degrees+5.5), x, y);
         Path path = new Path();
         path.setFillType(Path.FillType.EVEN_ODD);
-        path.moveTo(x - 40f, y - 40f);
-        path.lineTo(x - 60f, y - 40f);
-        path.lineTo(x - 40f, y - 60f);
-        path.lineTo(x - 40f, y - 40f);
+        path.moveTo(x - 34f, y - 34f);
+        path.lineTo(x - 54f, y - 34f);
+        path.lineTo(x - 34f, y - 54f);
+        path.lineTo(x - 34f, y - 34f);
         path.close();
         canvas.drawPath(path, paint);
         canvas.restore();
